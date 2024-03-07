@@ -13,7 +13,7 @@ async function getUserDetails() {
   // } catch (e) {
   //   console.log(e);
   // }
-  const signUp = await axios.get("http://localhost:3000/api/user");
+  const signUp = await axios.get("/api/user");
   return signUp?.data;
 }
 
