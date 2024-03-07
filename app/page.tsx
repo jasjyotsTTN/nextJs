@@ -13,8 +13,10 @@ async function getUserDetails() {
   // } catch (e) {
   //   console.log(e);
   // }
-  const signUp = await axios.get("/api/user");
-  return signUp?.data;
+  // const signUp = await axios.get("/api/user");
+  return {
+    data: "Yes",
+  };
 }
 
 export default async function Home() {
@@ -26,7 +28,7 @@ export default async function Home() {
     <div className="flex flex-col justify-center h-screen">
       <div className="flex justify-center">
         <div className="border p-8 rounded">
-          <div>{terraformDataResponse}</div>
+          <div>{terraformDataResponse?.data}</div>
         </div>
       </div>
     </div>
